@@ -1,0 +1,7 @@
+interface:
+  display_name: "B-roll Plan From Subtitles"
+  short_description: "Plan blue-white glass B-roll from exact subtitles"
+  brand_color: "#4FA3FF"
+  default_prompt: "Use $broll-plan-from-subtitled-video to turn my Chinese subtitled source video into a timing-locked B-roll design plan and key-frame previews."
+policy:
+  allow_implicit_invocation: true

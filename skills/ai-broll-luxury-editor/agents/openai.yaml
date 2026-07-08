@@ -1,0 +1,7 @@
+interface:
+  display_name: "AI B-roll Luxury Editor"
+  short_description: "Timing-locked Day5-style B-roll, screenshots, and no-twitch export"
+  brand_color: "#4FA3FF"
+  default_prompt: "Use $ai-broll-luxury-editor to plan, preview, and render my Chinese subtitled talking-head video with Day5-style blue/white glass overlays, real screenshot proof assets, and no-twitch transparent export."
+policy:
+  allow_implicit_invocation: true
