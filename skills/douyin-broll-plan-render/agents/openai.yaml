@@ -1,0 +1,4 @@
+interface:
+  display_name: "Douyin B-roll Plan Render"
+  short_description: "字幕锁定B-roll规划、预览、透明渲染与合成QC"
+  default_prompt: "Use $douyin-broll-plan-render to plan B-roll from a Chinese subtitled talking-head video, generate approval previews, then render transparent Remotion overlays and composite the final video."

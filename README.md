@@ -1,8 +1,34 @@
 # Codex Video Skills
 
-Two Codex skills for planning and producing premium B-roll overlays for Chinese talking-head videos.
+Codex skills for planning and producing premium B-roll overlays for Chinese talking-head videos.
 
 ## Skills
+
+### `douyin-broll-plan-render`
+
+The recommended combined workflow. It covers the full path:
+
+- subtitle/SRT-locked timeline confirmation
+- B-roll design planning
+- screenshot requirements
+- static key-frame previews and contact sheets
+- Remotion transparent overlay rendering
+- ffmpeg no-twitch composition over the original video
+- final ffprobe/contact-sheet QC
+
+Use this when you want one skill to take an episode from raw/subtitled video to approved plan, then to final export after approval.
+
+### `douyin-transparent-broll-render`
+
+A rendering/export-only workflow for approved Remotion overlays. It covers:
+
+- source video probing and frame-count matching
+- transparent Remotion PNG sequence rendering
+- alpha/frame-count verification
+- ffmpeg composition over the original video
+- final H.264/AAC MP4 QC
+
+Use this when the B-roll plan and Remotion implementation already exist and you only need a reliable export path.
 
 ### `ai-broll-luxury-editor`
 
@@ -33,6 +59,8 @@ Copy the skill folders into your Codex skills directory:
 
 ```bash
 mkdir -p ~/.codex/skills
+cp -R skills/douyin-broll-plan-render ~/.codex/skills/
+cp -R skills/douyin-transparent-broll-render ~/.codex/skills/
 cp -R skills/ai-broll-luxury-editor ~/.codex/skills/
 cp -R skills/broll-plan-from-subtitled-video ~/.codex/skills/
 ```
@@ -41,9 +69,11 @@ Then restart Codex or reload skills.
 
 ## Typical Workflow
 
-1. Use `broll-plan-from-subtitled-video` to inspect the video and SRT, build the timeline, and produce the B-roll plan.
-2. Review screenshot requirements and key-frame previews.
-3. Use `ai-broll-luxury-editor` to implement the approved edit, render transparent overlays, and composite with ffmpeg.
+1. Use `douyin-broll-plan-render` for the full plan-to-export workflow.
+2. Stop after timeline, plan, and key-frame previews for approval.
+3. After approval, continue with transparent Remotion overlay rendering and ffmpeg composition.
+4. Use `broll-plan-from-subtitled-video` alone when you only need planning.
+5. Use `douyin-transparent-broll-render` alone when you only need final render/export.
 
 ## Requirements
 

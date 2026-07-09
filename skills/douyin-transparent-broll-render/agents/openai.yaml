@@ -1,0 +1,4 @@
+interface:
+  display_name: "Douyin Transparent B-roll Render"
+  short_description: "抖音口播透明B-roll渲染、原片合成与成片QC流程"
+  default_prompt: "Use $douyin-transparent-broll-render to render a Chinese talking-head episode with transparent Remotion B-roll, ffmpeg compositing, and final QC."
